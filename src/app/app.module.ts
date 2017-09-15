@@ -13,6 +13,7 @@ import { RepoBrowserComponent } from './github/repo-browser/repo-browser.compone
 import { RepoListComponent } from './github/repo-list/repo-list.component';
 import { RepoDetailComponent } from './github/repo-detail/repo-detail.component';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
+import {OrderPipe} from "./home/orderBy"
 
 
 import {testService} from "./services/testService"
@@ -24,7 +25,8 @@ import {testService} from "./services/testService"
     RepoBrowserComponent,
     RepoListComponent,
     RepoDetailComponent,
-    HomeComponent
+    HomeComponent,
+    OrderPipe
   ],
   imports: [
     BrowserModule,

@@ -1,5 +1,6 @@
 import {Component} from '@angular/core';
 import {testService} from "../services/testService"
+import {OrderPipe} from "./orderBy"
 
 @Component({
   selector: 'home',
@@ -8,6 +9,9 @@ import {testService} from "../services/testService"
 })
 export class HomeComponent {
   records: Array<any>;
+  isDesc: boolean = false;
+  column: string = 'name';
+  direction: number;
 
   constructor(private testservice: testService) {
 
@@ -19,4 +23,10 @@ export class HomeComponent {
       console.log(this.records);
     })
   }
+  sorting(col:string){
+    console.log(col);
+    this.isDesc = !this.isDesc; //To  change the direction
+    this.column = col;
+    this.direction = this.isDesc ? 1 : -1;
+  };
 }

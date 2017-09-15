@@ -1,0 +1,10 @@
+.trClass {
+  background-color: aliceblue;
+
+}
+.trClass th:hover {
+  pointer: cursor;
+  background-color: dimgrey;
+  color: white;
+}
+
