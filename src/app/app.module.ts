@@ -13,7 +13,9 @@ import { RepoBrowserComponent } from './github/repo-browser/repo-browser.compone
 import { RepoListComponent } from './github/repo-list/repo-list.component';
 import { RepoDetailComponent } from './github/repo-detail/repo-detail.component';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
-import { ContactComponent } from './contact/contact.component';
+
+
+import {testService} from "./services/testService"
 
 @NgModule({
   declarations: [
@@ -22,8 +24,7 @@ import { ContactComponent } from './contact/contact.component';
     RepoBrowserComponent,
     RepoListComponent,
     RepoDetailComponent,
-    HomeComponent,
-    ContactComponent
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +34,8 @@ import { ContactComponent } from './contact/contact.component';
     RouterModule.forRoot(rootRouterConfig, { useHash: true })
   ],
   providers: [
-    GithubService
+    GithubService,
+    testService
   ],
   bootstrap: [ AppComponent ]
 })
