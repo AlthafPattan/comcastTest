@@ -2,6 +2,8 @@
 import {Pipe, PipeTransform} from "@angular/core";
 
 @Pipe({  name: 'orderBy' })
+
+//Custom Pipe to sort data
 export class OrderPipe implements PipeTransform {
 
   transform(records: Array<any>, args?: any): any {
